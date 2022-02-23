@@ -1,12 +1,3 @@
-package me.illusion.outcastranks.Ranks;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-import org.bukkit.ChatColor;
-import org.bukkit.scoreboard.Team;
-
-import java.util.Map;
-
 public class RankChat {
     private static Map<String, String> rankChatColors = Maps.newHashMap();
 
