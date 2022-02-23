@@ -1,11 +1,3 @@
-package me.illusion.outcastranks.Ranks;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-
-import java.util.Map;
-import java.util.Set;
-
 public class RankCommands {
     private static Map<String, String> rankCommands = Maps.newHashMap();
 
