@@ -1,17 +1,3 @@
-package me.illusion.outcastranks.Ranks;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.OutcastRanks;
-import me.illusion.outcastranks.Permissions.RankPermissions;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-
 public class RankData {
     private static Map<String, String> rankList = Maps.newLinkedHashMap();
     private static Map<String, String> userRanks = Maps.newHashMap();
