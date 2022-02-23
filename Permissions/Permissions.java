@@ -1,14 +1,3 @@
-package me.illusion.outcastranks.Permissions;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.OutcastRanks;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
-import org.bukkit.permissions.PermissionAttachment;
-
-import java.util.Map;
-import java.util.Set;
-
 public class Permissions {
     private static Map<String, PermissionAttachment> playerPerms = Maps.newHashMap();
 
