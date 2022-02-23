@@ -1,12 +1,3 @@
-package me.illusion.outcastranks.Ranks;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-
 public class RankPrefix {
     private static Map<String, String> rankPrefixes = Maps.newHashMap();
 
