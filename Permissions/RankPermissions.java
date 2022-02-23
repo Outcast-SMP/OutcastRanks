@@ -1,14 +1,3 @@
-package me.illusion.outcastranks.Permissions;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.Ranks.RankData;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-
-import java.util.Map;
-import java.util.Set;
-
 public class RankPermissions {
     private static Map<String, String> rankPermissions = Maps.newHashMap();
 
@@ -113,7 +102,7 @@ public class RankPermissions {
 
         for (int i = 0; i <= listPerms.length - 1; i++) {
             if (listPerms[i] != null) {
-                //HermesHiveRanks.GetInstance().coreAPI.GetInstance().log("Adding perm -> " + i + " Name -> " + listPerms[i]).Normal();
+                //new LogMe("Adding perm -> " + i + " Name -> " + listPerms[i]).Normal();
                 new Permissions(ply, listPerms[i]).addPlayerPermission();
             }
         }
