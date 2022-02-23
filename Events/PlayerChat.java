@@ -1,16 +1,3 @@
-package me.illusion.outcastranks.Events;
-
-import me.illusion.outcastranks.Ranks.RankChat;
-import me.illusion.outcastranks.Ranks.RankData;
-import me.illusion.outcastranks.Ranks.RankPrefix;
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
-
-import java.util.UUID;
-
 public class PlayerChat implements Listener {
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent e) {
