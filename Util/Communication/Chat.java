@@ -1,12 +1,3 @@
-package me.illusion.outcastranks.Util.Communication;
-
-import me.illusion.outcastranks.OutcastRanks;
-import me.illusion.outcastranks.Util.Config.ConfigData;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
 public class Chat {
     public static String watermark = new ConfigData(OutcastRanks.getInstance().config).getStringFromConfig("ranks.prefix") + " ";
 
