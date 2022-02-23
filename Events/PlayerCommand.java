@@ -1,15 +1,3 @@
-package me.illusion.outcastranks.Events;
-
-import me.illusion.outcastranks.Ranks.RankCommands;
-import me.illusion.outcastranks.Ranks.RankData;
-import me.illusion.outcastranks.Util.Communication.Chat;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-
-import java.util.UUID;
-
 public class PlayerCommand implements Listener {
     @EventHandler
     public void onPlayerCommand(PlayerCommandPreprocessEvent e) {
