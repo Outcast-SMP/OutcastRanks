@@ -1,25 +1,3 @@
-package me.illusion.outcastranks.Commands;
-
-import me.illusion.outcastranks.OutcastRanks;
-import me.illusion.outcastranks.Permissions.RankPermissions;
-import me.illusion.outcastranks.Ranks.RankChat;
-import me.illusion.outcastranks.Ranks.RankCommands;
-import me.illusion.outcastranks.Ranks.RankData;
-import me.illusion.outcastranks.Ranks.RankPrefix;
-import me.illusion.outcastranks.Util.Communication.Chat;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-import me.illusion.outcastranks.Util.Config.ConfigData;
-import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
-import org.bukkit.entity.Player;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Commands implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
