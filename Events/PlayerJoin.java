@@ -1,19 +1,3 @@
-package me.illusion.outcastranks.Events;
-
-import me.illusion.outcastranks.OutcastRanks;
-import me.illusion.outcastranks.Permissions.Permissions;
-import me.illusion.outcastranks.Permissions.RankPermissions;
-import me.illusion.outcastranks.Ranks.RankData;
-import me.illusion.outcastranks.Util.Communication.Chat;
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.permissions.PermissionAttachment;
-
-import java.util.UUID;
-
 public class PlayerJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
