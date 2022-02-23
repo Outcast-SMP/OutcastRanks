@@ -1,20 +1,3 @@
-package me.illusion.outcastranks;
-
-import me.illusion.outcastcore.OutcastCore;
-import me.illusion.outcastranks.API.Ranks;
-import me.illusion.outcastranks.Commands.Commands;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-import me.illusion.outcastranks.Util.Config.ConfigState;
-import me.illusion.outcastranks.Util.Config.CreateConfig;
-import net.milkbowl.vault.permission.Permission;
-import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.RegisteredServiceProvider;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.reflections.Reflections;
-
-import java.lang.reflect.InvocationTargetException;
-
 public final class OutcastRanks extends JavaPlugin {
     static OutcastRanks instance = null;
 
