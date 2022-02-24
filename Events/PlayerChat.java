@@ -1,10 +1,11 @@
 public class PlayerChat implements Listener {
-    @EventHandler
+        @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent e) {
         Player ply = e.getPlayer();
         UUID pID = ply.getUniqueId();
 
         if (!RankData.userHasRank(pID)) {
+            e.setFormat(formatChat("#MESSAGE", "%2$s", "#NAME", "%1$s", "#RANK", ""));
             return;
         }
 
@@ -18,9 +19,31 @@ public class PlayerChat implements Listener {
         if (RankPrefix.rankHasPrefix(userRank)) {
             String rankPrefix = ChatColor.translateAlternateColorCodes('&', RankPrefix.getRankPrefix(userRank));
 
-            e.setFormat(rankPrefix + " " + "%1$s:" + chatColor + " %2$s");
+            e.setFormat(formatChat("#MESSAGE", chatColor + "%2$s", "#NAME", "%1$s", "#RANK", rankPrefix));
             return;
         }
-        e.setFormat("%1$s:" + chatColor + " %2$s");
+
+        e.setFormat(formatChat("#MESSAGE", chatColor + "%2$s", "#NAME", "%1$s", "#RANK", ""));
+    }
+
+    private String formatChat(String messageHolder, String message, String nameHolder, String name, String rankHolder, String rank) {
+        String formatMessage = new ConfigData(OutcastRanks.getInstance().config).getStringFromConfig("ranks.chat-format");
+
+        if (rankHolder != null) {
+            if (formatMessage.contains(rankHolder))
+                formatMessage = formatMessage.replace("#RANK", rank);
+        }
+
+        if (nameHolder != null) {
+            if (formatMessage.contains(nameHolder))
+                formatMessage = formatMessage.replace("#NAME", name);
+        }
+
+        if (messageHolder != null) {
+            if (formatMessage.contains(messageHolder))
+                formatMessage = formatMessage.replace("#MESSAGE", message);
+        }
+
+        return formatMessage;
     }
 }
