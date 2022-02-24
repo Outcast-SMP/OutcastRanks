@@ -1,9 +1,11 @@
 public class Commands implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        String errorMsg = "&cIncorrect command usage. Please use /ranks [add | remove | edit | reload]";
+
         if (!(sender instanceof Player)) {
             if (args.length <= 0) {
-                new Chat(sender, "&cIncorrect command usage. Please use /ranks [add | remove | edit | reload]").messageSender(true);
+                new Chat(sender, errorMsg).messageSender(true);
                 return true;
             }
 
@@ -17,7 +19,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                     return true;
                 }
 
-                new Chat(sender, "&cIncorrect command usage. Please use /ranks [add | remove | edit | reload]").messageSender(true);
+                new Chat(sender, errorMsg).messageSender(true);
                 return true;
             }
             return true;
@@ -26,7 +28,7 @@ public class Commands implements CommandExecutor, TabCompleter {
         Player ply = (Player) sender;
 
         if (args.length <= 0) {
-            new Chat(ply, "&cIncorrect command usage. Please use /ranks [add | remove | edit | reload]").message(true);
+            new Chat(ply, errorMsg).message(true);
             return true;
         }
 
@@ -45,7 +47,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                 return true;
             }
 
-            new Chat(ply, "&cIncorrect command usage. Please use /ranks [add | remove | edit | reload]").message(true);
+            new Chat(ply, errorMsg).message(true);
             return true;
         }
 
@@ -249,7 +251,7 @@ public class Commands implements CommandExecutor, TabCompleter {
                 }
                 break;
             default:
-                new Chat(ply, "&cIncorrect command usage. Please use /ranks [add | remove | edit | reload]").message(true);
+                new Chat(ply, errorMsg).message(true);
                 break;
         }
 
