@@ -1,13 +1,3 @@
-package me.illusion.outcastranks.Events;
-
-import com.google.common.collect.Maps;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
-
-import java.util.Map;
-
 public class PlayerDeath implements Listener {
     private static Map<String, Integer> deaths = Maps.newHashMap();
 
