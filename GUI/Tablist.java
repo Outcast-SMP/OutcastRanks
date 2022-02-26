@@ -1,24 +1,3 @@
-package me.illusion.outcastranks.GUI;
-
-import com.google.common.collect.Maps;
-import me.illusion.outcastranks.Events.PlayerDeath;
-import me.illusion.outcastranks.GUI.Extra.TablistPrefix;
-import me.illusion.outcastranks.OutcastRanks;
-import me.illusion.outcastranks.Ranks.RankChat;
-import me.illusion.outcastranks.Ranks.RankData;
-import me.illusion.outcastranks.Ranks.RankPrefix;
-import me.illusion.outcastranks.Util.Communication.LogMe;
-import me.illusion.outcastranks.Util.Config.ConfigData;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
-import org.bukkit.scoreboard.Team;
-
-import java.util.Map;
-import java.util.UUID;
-
 public class Tablist {
     private static Map<String, Integer> tasks = Maps.newHashMap();
     public int taskID;
