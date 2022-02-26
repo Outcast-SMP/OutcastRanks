@@ -1,11 +1,3 @@
-package me.illusion.outcastranks.GUI.Extra;
-
-import me.illusion.outcastranks.Events.PlayerDeath;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.Team;
-
 public class TablistPrefix {
     private Team team;
 
