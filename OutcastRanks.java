@@ -2,7 +2,7 @@ public final class OutcastRanks extends JavaPlugin {
     static OutcastRanks instance = null;
 
     public OutcastCore coreAPI = null;
-    public CreateConfig config, rankData, rankWaitingList;
+    public CreateConfig config, rankData, rankWaitingList, tablist, stats;
 
     private Permission permission = null;
     private static Ranks rankAPI;
@@ -29,13 +29,30 @@ public final class OutcastRanks extends JavaPlugin {
         config = new CreateConfig("config.yml", "Outcast/Ranks");
         rankData = new CreateConfig("ranks.yml", "Outcast/Ranks");
         rankWaitingList = new CreateConfig("ranks-waiting.yml", "Outcast/Ranks");
+        tablist = new CreateConfig("tablist.yml", "Outcast/Ranks");
+        stats = new CreateConfig("player-stats.yml", "Outcast/Ranks");
 
         new ConfigState(config).configDefaults();
         new ConfigState(rankData).loadConfig();
         new ConfigState(rankWaitingList).loadWaitingList();
+        new ConfigState(tablist).loadTablist();
+        new ConfigState(stats).loadStats();
 
         setupCommands();
         setupListeners();
+
+        if (!Bukkit.getServer().getOnlinePlayers().isEmpty()) {
+            for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+                new Tablist(onlinePlayer).beginTablist();
+            }
+        }
+
+        getServer().getScheduler().runTaskTimer(this, new Runnable() {
+            @Override
+            public void run() {
+                Tablist.displayRanks();
+            }
+        }, 0, 40);
     }
 
     @Override
@@ -44,6 +61,7 @@ public final class OutcastRanks extends JavaPlugin {
 
         new ConfigState(rankData).saveConfig();
         new ConfigState(rankWaitingList).saveWaitingList();
+        new ConfigState(stats).saveStats();
     }
 
     public static OutcastRanks getInstance() {
