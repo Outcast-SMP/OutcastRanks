@@ -134,7 +134,7 @@ public class RankData {
             return false;
         }
 
-        if (isValidRank(rankIndex.toString())) {
+        if (isValidRank(rankIndex)) {
             new LogMe("A rank already has that specified index (" + rankIndex + ").").Error();
             return false;
         }
